@@ -1,5 +1,32 @@
 {{ define "main" }}
 
+{{ $aboutPages := where .Site.RegularPages "Type" "in" .Site.Params.about }}
+
+
+<div class="index">
+
+{{ range $aboutPages }}
+<div class="single">
+
+    <article>
+
+
+        <div class="article-header">
+            <h2 class="article-excerpt">{{ .Params.excerpt }}</h2>
+        </div>
+
+        <div class="article-content">
+            {{ .Content }}
+        </div>
+
+    </article>
+
+</div>
+    
+    {{ end }}
+    
+</div>
+
 {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.main) }}
 
 <div class="index">

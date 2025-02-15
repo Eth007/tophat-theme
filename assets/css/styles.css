@@ -4,9 +4,11 @@
 /* colors */
 /* defaults */
 html {
-  background-color: #f7f7f7;
+//  background-color: #f7f7f7;
+  background-color: #f2f8fa;
 }
 html body {
+//  font-family: "Trebuchet MS", serif;
   font-family: "Bitter", serif;
 }
 html body * {
